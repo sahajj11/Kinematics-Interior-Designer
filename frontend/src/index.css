@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+
+:root {
+  /* This is a high-end 'Architectural Cream' */
+  --bg-cream: #F5F5F2; 
+}
+
+.text-outline-thin {
+  -webkit-text-stroke: 1px black;
+}
+
+/* Apply this to your images in the About section */
+.img-sharp {
+  image-rendering: -webkit-optimize-contrast; /* Webkit browsers */
+  image-rendering: crisp-edges;
+  backface-visibility: hidden; /* Fixes flicker and slight blur during animations */
+  transform: translateZ(0); /* Forces GPU rendering for better clarity */
+}
+/* 
+body {
+  background-color: #FCFCFB;
+
+  background-image: radial-gradient(#000000 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+  background-opacity: 0.05;
+} */
+
+body {
+  background-color: var(--bg-cream);
+  /* The subtle grid looks even better on cream */
+  background-image: radial-gradient(#000000 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+  opacity: 0.8; 
+}
