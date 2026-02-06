@@ -29,7 +29,7 @@ const phases = [
 
 const Approach = () => {
   return (
-    <section id="approach" className="bg-[#FCFCFB] py-32 px-6 md:px-16 overflow-hidden">
+    <section id="approach" className="bg-[#FCFCFB] bg-amber-50  py-32 px-6 md:px-16 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Section Header */}

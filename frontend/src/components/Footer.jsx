@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FCFCFB] pt-16 pb-10 px-6 md:px-16 border-t border-gray-100">
+    <footer className="bg-[#FCFCFB] bg-amber-50  pt-16 pb-10 px-6 md:px-16 border-t border-gray-100">
       <div className="max-w-[1500px] mx-auto">
         
         {/* Top Section: Large Branding & CTA */}

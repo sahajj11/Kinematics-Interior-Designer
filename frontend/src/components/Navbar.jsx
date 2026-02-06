@@ -39,7 +39,7 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden lg:flex items-center gap-12">
-          {['Portfolio', 'Approach', 'Studio', 'Contact'].map((item) => (
+          {['About', 'Services', 'Approach', 'Our Works'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -59,7 +59,7 @@ const Navbar = () => {
             ? "border-black bg-black text-white hover:bg-transparent hover:text-black" 
             : "border-white/30 bg-white/10 text-white backdrop-blur-md hover:bg-white hover:text-black"
           }`}>
-            Inquire Now
+            Contact Us
           </button>
         </div>
 

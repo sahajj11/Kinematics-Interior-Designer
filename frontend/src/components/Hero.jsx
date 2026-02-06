@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import videoo from "../assets/video_kin_b.mp4";
+import videoo from "../assets/video_kin_d.mp4";
 
 const Hero = () => {
   return (
@@ -23,7 +23,7 @@ const Hero = () => {
 
       {/* 2. Minimalist Scroll Indicator (Signals there is more below) */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-4">
-        <span className="text-[10px] uppercase tracking-[0.5em] text-white/60 font-light">Scroll</span>
+        
         <div className="h-12 w-[1px] bg-white/20 relative overflow-hidden">
           <motion.div 
             animate={{ y: [0, 48] }}

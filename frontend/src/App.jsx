@@ -13,9 +13,9 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-[#F5F5F2] min-h-screen selection:bg-black selection:text-white">
+    <div className="bg-[#F5F5F2]  min-h-screen selection:bg-black selection:text-white">
       <Navbar />
-      <main className="flex flex-col">
+      <main className="flex flex-col ">
         <Hero />
         
         {/* We keep the components, but they now sit on the cream background */}

@@ -23,7 +23,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-[#FCFCFB] pt-10 md:pt-48 border-t border-gray-100">
+    <section id="projects" className="bg-[#FCFCFB] bg-amber-50  pt-10 md:pt-48 border-t border-gray-100">
       {/* Header */}
       <div className="max-w-[1400px] mx-auto px-6 mb-20 flex justify-between items-end">
         <h2 className="text-6xl md:text-8xl font-serif uppercase text-black leading-[0.9]">
@@ -95,7 +95,7 @@ const Projects = () => {
 
       {/* --- NEW: VIEW ALL PROJECTS SECTION --- */}
       <motion.div 
-        className="w-full py-32 md:py-48 bg-white flex flex-col items-center justify-center text-center px-6 group cursor-pointer"
+        className="w-full py-32 md:py-48 bg-white bg-amber-50  flex flex-col items-center justify-center text-center px-6 group cursor-pointer"
         whileInView={{ opacity: 1 }}
         initial={{ opacity: 0 }}
       >

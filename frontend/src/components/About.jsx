@@ -4,7 +4,7 @@ import photoo from "../assets/fur.avif";
 
 const About = () => {
   return (
-    <section id="about" className="relative bg-[#FCFCFB] py-32 md:py-48 px-6 md:px-16 overflow-hidden">
+    <section id="about" className="relative bg-[#FCFCFB] bg-amber-50 py-32 md:py-48 px-6 md:px-16 overflow-hidden">
       {/* Background Decorative Text - Ultra Light */}
       <div className="absolute top-20 left-10 text-[20vw] font-serif text-black/[0.01] select-none pointer-events-none uppercase">
         Studio
