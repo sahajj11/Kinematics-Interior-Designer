@@ -1,4 +1,4 @@
- import { useState } from 'react';
+import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -22,18 +22,16 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 w-full z-[100] px-6 md:px-16 transition-all duration-500 bg-white  py-4 border-b border-gray-100" 
-         
-       
+        className="fixed top-0 w-full z-[100] px-6 md:px-16 transition-all duration-500 bg-white py-4 border-b border-gray-100"
       >
         <div className="max-w-[1400px] mx-auto flex justify-between items-center">
           
           {/* Logo */}
           <div className="flex flex-col group cursor-pointer z-[110]">
-            <span className="text-2xl font-serif tracking-[0.2em] uppercase transition-colors duration-500 text-black" >
+            <span className="text-2xl font-serif tracking-[0.2em] uppercase transition-colors duration-500 text-black">
               Kinematics
             </span>
-            <span className="text-[8px] tracking-[0.5em] uppercase font-bold transition-colors duration-500 text-gray-400" >
+            <span className="text-[8px] tracking-[0.5em] uppercase font-bold transition-colors duration-500 text-gray-400">
               Interior Designer
             </span>
           </div>
@@ -44,33 +42,29 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-[10px] font-black uppercase tracking-[0.3em] relative group overflow-hidden transition-colors duration-500 text-gray-600 hover:text-black" 
-                 
-                
+                className="text-[10px] font-black uppercase tracking-[0.3em] relative group overflow-hidden transition-colors duration-500 text-gray-600 hover:text-black"
               >
                 <span className="relative z-10">{item}</span>
-                <span className={`absolute bottom-0 left-0 w-full h-[1px] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left ${isScrolled ? "bg-black" : "bg-white"}`} />
+                <span className="absolute bottom-0 left-0 w-full h-[1px] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left bg-black" />
               </a>
             ))}
-            <button className="px-8 py-3 text-[10px] font-black uppercase tracking-widest transition-all duration-500 border  border-black bg-black text-white hover:bg-transparent hover:text-black" 
-             
-            >
+            <button className="px-8 py-3 text-[10px] font-black uppercase tracking-widest transition-all duration-500 border border-black bg-black text-white hover:bg-transparent hover:text-black">
               Contact Us
             </button>
           </div>
 
-          {/* Mobile Menu Icon (Animated) */}
+          {/* Mobile Menu Icon (Lines always black) */}
           <div 
             className="lg:hidden flex flex-col gap-1.5 cursor-pointer z-[110] p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
             <motion.div 
               animate={isOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
-              className={`w-8 h-[1px] transition-colors ${isScrolled || isOpen ? "bg-black" : "bg-white"}`} 
+              className="w-8 h-[1px] bg-black" 
             />
             <motion.div 
               animate={isOpen ? { rotate: -45, y: -3, width: "32px" } : { rotate: 0, y: 0, width: "20px" }}
-              className={`h-[1px] self-end transition-colors ${isScrolled || isOpen ? "bg-black" : "bg-white"}`} 
+              className="h-[1px] self-end bg-black" 
             />
           </div>
         </div>
