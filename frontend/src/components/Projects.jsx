@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 
 const projects = [
-
   { title: "Hermès Design Villa", location: "Dubai, UAE", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800" },
   { title: "Fendi Design Villa", location: "Palm Jumeirah", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800" },
   { title: "Marsa Al Arab Villa", location: "Dubai Coastline", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800" },
@@ -14,7 +13,6 @@ const projects = [
   { title: "Al Barari Sanctuary", location: "The Residences", image: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800" },
   { title: "Jumeirah Golf Estates", location: "Whispering Pines", image: "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=800" },
   { title: "Meydan Gated Villa", location: "Nad Al Sheba", image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800" }
-
 ];
 
 const Projects = () => {
@@ -22,7 +20,7 @@ const Projects = () => {
     <section id="projects" className="bg-white py-20">
       <div className="max-w-[100%] mx-auto px-0">
         
-        {/* Header Section: Minimalist & Clean */}
+        {/* Header Section */}
         <div className="flex justify-between items-center px-6 md:px-16 mb-12">
           <h2 className="text-4xl md:text-5xl font-light text-gray-800 tracking-tight flex items-baseline gap-3">
             Our <span className="font-serif italic text-gray-400">projects</span>
@@ -32,7 +30,7 @@ const Projects = () => {
           </button>
         </div>
 
-        {/* The 4-Column Grid */}
+        {/* The Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5 bg-gray-100 border-y border-gray-100">
           {projects.map((project, i) => (
             <motion.div
@@ -40,17 +38,22 @@ const Projects = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: i * 0.1 }}
-              className="group relative aspect-[3/4] overflow-hidden bg-white"
+              transition={{ duration: 0.8, delay: (i % 4) * 0.1 }}
+              /* LOGIC: 
+                 - If index is 4 or greater (the 5th item onwards), 
+                   it is 'hidden' on mobile and 'sm:block' on larger screens.
+              */
+              className={`group relative aspect-[3/4] overflow-hidden bg-white 
+                ${i >= 4 ? 'hidden sm:block' : 'block'}`}
             >
-              {/* Image Layer: Static and Sharp */}
+              {/* Image Layer */}
               <img 
                 src={project.image} 
                 alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
 
-              {/* Bottom Info Bar: Visible on Hover/Static in Mobile */}
+              {/* Bottom Info Bar */}
               <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/60 to-transparent">
                 <h3 className="text-white text-xs font-bold uppercase tracking-[0.2em] mb-1">
                   {project.title}
@@ -60,13 +63,13 @@ const Projects = () => {
                 </p>
               </div>
 
-              {/* Thin Border Overlay for "Magazine" Look */}
+              {/* Thin Border Overlay */}
               <div className="absolute inset-0 border-[0.5px] border-white/10 pointer-events-none" />
             </motion.div>
           ))}
         </div>
 
-        {/* Chat/Agent Floating Icon (Bottom Right like in your image) */}
+        {/* Chat/Agent Floating Icon */}
         <div className="fixed bottom-10 right-10 z-50">
           <div className="relative group">
             <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-xl cursor-pointer">
