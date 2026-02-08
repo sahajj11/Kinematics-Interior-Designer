@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-white pt-32 pb-12 px-6 md:px-16 border-t border-gray-100">
+    <footer className="bg-orange-50 pt-32 pb-12 px-6 md:px-16 border-t border-gray-100">
       <div className="max-w-[1400px] mx-auto">
         
         {/* 1. THE GRAND CALL TO ACTION */}

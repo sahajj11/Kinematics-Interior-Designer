@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-white py-24 md:py-40 px-6 md:px-16 border-t border-gray-50">
+    <section id="contact" className="bg-orange-50 py-24 md:py-40 px-6 md:px-16 border-t border-gray-50">
       <div className="max-w-[1400px] mx-auto">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32">

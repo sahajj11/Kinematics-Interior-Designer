@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="relative bg-white py-24 md:py-48 px-6 md:px-16 overflow-hidden">
+    <section id="about" className="relative bg-orange-50 py-24 md:py-48 px-6 md:px-16 overflow-hidden">
       
       {/* Background Decorative Element - Ultra Subtle Silver */}
       <div className="absolute top-10 left-[-5%] text-[15vw] font-serif italic text-gray-50 select-none pointer-events-none leading-none">

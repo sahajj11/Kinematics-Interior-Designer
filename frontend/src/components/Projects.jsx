@@ -17,7 +17,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-white py-20">
+    <section id="projects" className="bg-orange-50 py-20">
       <div className="max-w-[100%] mx-auto px-0">
         
         {/* Header Section */}

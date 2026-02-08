@@ -23,7 +23,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="bg-white py-24 md:py-40 px-6 md:px-16">
+    <section id="services" className="bg-orange-50 py-24 md:py-40 px-6 md:px-16">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Header Section */}

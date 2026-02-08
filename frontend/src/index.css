@@ -27,7 +27,7 @@ body {
 } */
 
 body {
-  background-color: var(--bg-cream);
+  background-color: #EFECE5;
   /* The subtle grid looks even better on cream */
   background-image: radial-gradient(#000000 0.5px, transparent 0.5px);
   background-size: 40px 40px;
