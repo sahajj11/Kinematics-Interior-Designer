@@ -76,7 +76,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         {/* 3. THE FINAL FOOTNOTE */}
         <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-6">
