@@ -2,101 +2,94 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FCFCFB] bg-amber-50  pt-16 pb-10 px-6 md:px-16 border-t border-gray-100">
-      <div className="max-w-[1500px] mx-auto">
+    <footer className="bg-white pt-32 pb-12 px-6 md:px-16 border-t border-gray-100">
+      <div className="max-w-[1400px] mx-auto">
         
-        {/* Top Section: Large Branding & CTA */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
-          <div className="lg:col-span-8">
-            <h2 className="text-[10vw] font-serif leading-[0.8] uppercase text-black mb-8">
-              Let's <br /> <span className="italic text-gray-300">Collaborate</span>
+        {/* 1. THE GRAND CALL TO ACTION */}
+        <div className="mb-32">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-[12vw] font-serif leading-[0.85] text-black uppercase mb-12">
+              Let's <br /> <span className="italic text-gray-300">Design.</span>
             </h2>
-            <div className="group cursor-pointer inline-flex items-center gap-6 mt-4">
-              <div className="w-16 h-[1px] bg-black group-hover:w-32 transition-all duration-700"></div>
-              <span className="text-xl md:text-2xl font-light tracking-tight text-black">
+            
+            <a 
+              href="mailto:hello@kinematics.ae" 
+              className="group inline-flex items-center gap-8"
+            >
+              <div className="w-20 h-[1px] bg-black group-hover:w-40 transition-all duration-1000"></div>
+              <span className="text-2xl md:text-4xl font-light tracking-tighter text-black">
                 hello@kinematics.ae
               </span>
-            </div>
-          </div>
-          
-          <div className="lg:col-span-4 flex flex-col justify-end">
-            <p className="text-gray-400 text-xs uppercase tracking-[0.4em] mb-4">Newsletter</p>
-            <div className="relative border-b border-black/10 pb-2">
-              <input 
-                type="email" 
-                placeholder="EMAIL ADDRESS" 
-                className="bg-transparent w-full text-[10px] tracking-[0.2em] outline-none placeholder:text-gray-300 uppercase py-2"
-              />
-              <button className="absolute right-0 top-1/2 -translate-y-1/2 text-[10px] font-black uppercase">
-                Join
-              </button>
-            </div>
-          </div>
+            </a>
+          </motion.div>
         </div>
 
-        {/* Middle Section: Global Offices & Links */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 pb-24 border-b border-gray-100">
+        {/* 2. THE EDITORIAL INFORMATION GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 pb-20 border-b border-gray-100">
           
-          {/* Dubai Office */}
-          <div className="flex flex-col gap-4">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">Dubai HQ</span>
-            <p className="text-sm text-gray-600 leading-relaxed font-light">
-              DIP First, Warehouse 4-6<br />
-              P.O. Box 390077<br />
-              Dubai, UAE
+          {/* Dubai HQ Section */}
+          <div className="flex flex-col gap-6">
+            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-gray-400">HQ — Dubai</span>
+            <p className="text-sm text-gray-600 leading-loose font-light">
+              Business Bay, Level 24<br />
+              The Opus by Zaha Hadid<br />
+              Dubai, United Arab Emirates
             </p>
           </div>
 
-          {/* London Studio */}
-          <div className="flex flex-col gap-4">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">London</span>
-            <p className="text-sm text-gray-600 leading-relaxed font-light">
-              24 Old Burlington St<br />
-              Mayfair, London<br />
-              United Kingdom
-            </p>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="flex flex-col gap-4">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">Navigate</span>
-            <ul className="text-sm text-gray-600 space-y-2 font-light">
-              <li><a href="#projects" className="hover:text-black transition-colors">The Folio</a></li>
-              <li><a href="#about" className="hover:text-black transition-colors">The Studio</a></li>
-              <li><a href="#services" className="hover:text-black transition-colors">Expertise</a></li>
-            </ul>
-          </div>
-
-          {/* Social Presence */}
-          <div className="flex flex-col gap-4">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">Follow</span>
-            <ul className="text-sm text-gray-600 space-y-2 font-light">
+          {/* Social Links Section */}
+          <div className="flex flex-col gap-6">
+            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-gray-400">Follow</span>
+            <ul className="text-sm text-gray-600 space-y-3 font-light">
               <li><a href="#" className="hover:text-black transition-colors">Instagram</a></li>
               <li><a href="#" className="hover:text-black transition-colors">LinkedIn</a></li>
               <li><a href="#" className="hover:text-black transition-colors">Pinterest</a></li>
             </ul>
           </div>
 
-          {/* Certification Logos (Optional but very Dubai) */}
-          <div className="hidden lg:flex flex-col justify-end items-end gap-4 opacity-30 grayscale hover:opacity-100 transition-opacity">
-             <div className="text-[8px] tracking-[0.3em] uppercase text-right">Licensed by <br /> Dubai Municipality</div>
+          {/* Navigation Section */}
+          <div className="flex flex-col gap-6">
+            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-gray-400">Navigate</span>
+            <ul className="text-sm text-gray-600 space-y-3 font-light">
+              <li><a href="#projects" className="hover:text-black transition-colors underline underline-offset-4">The Folio</a></li>
+              <li><a href="#about" className="hover:text-black transition-colors">The Studio</a></li>
+              <li><a href="#services" className="hover:text-black transition-colors">Expertise</a></li>
+            </ul>
+          </div>
+
+          {/* Newsletter / Call to Action */}
+          <div className="flex flex-col gap-6">
+            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-gray-400">Newsletter</span>
+            <div className="relative border-b border-black/10 pb-2">
+              <input 
+                type="email" 
+                placeholder="YOUR EMAIL" 
+                className="bg-transparent w-full text-[10px] tracking-[0.2em] outline-none placeholder:text-gray-200 uppercase py-2"
+              />
+              <button className="absolute right-0 top-1/2 -translate-y-1/2 text-[10px] font-black uppercase hover:text-gray-400 transition-colors">
+                Join
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-4">
-            <div className="w-6 h-6 bg-black flex items-center justify-center">
-              <span className="text-white text-[10px] italic">K</span>
-            </div>
-            <span className="text-[9px] uppercase tracking-[0.5em] text-gray-400">
-              © 2026 Kinematics Interior Designer
+        {/* 3. THE FINAL FOOTNOTE */}
+        <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="flex items-center gap-6">
+            <div className="text-lg font-serif italic text-black">Kinematics.</div>
+            <span className="text-[9px] uppercase tracking-[0.6em] text-gray-300">
+              © 2026 Crafted in Dubai
             </span>
           </div>
           
-          <div className="flex gap-10 text-[9px] uppercase tracking-[0.4em] text-gray-400">
-            <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-black transition-colors">Terms of Service</a>
+          <div className="flex gap-12 text-[9px] uppercase tracking-[0.4em] text-gray-400">
+            <a href="#" className="hover:text-black transition-colors">Privacy</a>
+            <a href="#" className="hover:text-black transition-colors">Legal</a>
+            <a href="#" className="hover:text-black transition-colors">Cookies</a>
           </div>
         </div>
 

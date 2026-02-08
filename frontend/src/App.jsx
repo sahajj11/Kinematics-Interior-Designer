@@ -6,6 +6,8 @@ import Services from './components/Services';
 import Approach from './components/Approach';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Contact from './components/Contact.JSX';
+
 // Import other components as you build them
 // import Approach from './components/Approach';
 // import Projects from './components/Projects';
@@ -21,8 +23,9 @@ function App() {
         {/* We keep the components, but they now sit on the cream background */}
         <About />
         <Services />
-        <Approach />
+       
         <Projects />
+        <Contact />
         
         <Footer />
       </main>
