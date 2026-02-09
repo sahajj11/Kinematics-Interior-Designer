@@ -48,9 +48,9 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-full h-[1px] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left bg-black" />
               </a>
             ))}
-            <button className="px-8 py-3 text-[10px] font-black uppercase tracking-widest transition-all duration-500 border border-black bg-black text-white hover:bg-transparent hover:text-black">
+            <a href="#contact" className="px-8 py-3 text-[10px] font-black uppercase tracking-widest transition-all duration-500 border border-black bg-black text-white hover:bg-transparent hover:text-black">
               Contact Us
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Icon (Lines always black) */}
