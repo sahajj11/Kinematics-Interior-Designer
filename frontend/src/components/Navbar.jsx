@@ -95,6 +95,7 @@ const Navbar = () => {
             ))}
             <motion.a
               href="#contact"
+              onClick={() => setIsOpen(false)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
