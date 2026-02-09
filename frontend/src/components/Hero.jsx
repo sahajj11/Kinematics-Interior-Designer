@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import videoo from "../assets/video_kin_f.mp4";
+import videoo from "../assets/video_kin_g.mp4";
 
 const Hero = () => {
   return (
