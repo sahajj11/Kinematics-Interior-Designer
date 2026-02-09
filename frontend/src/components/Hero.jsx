@@ -4,21 +4,14 @@ import mobileVideo from "../assets/video_kin_g.mp4";
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile(); // Check on mount
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  
   return (
     <section className="relative h-screen w-full overflow-hidden bg-white">
       {/* 1. The Video Background Layer */}
       <div className="absolute inset-0 z-0">
         
         {/* Desktop Video: Hidden on small screens, shown on medium (768px) and up */}
-        {/* <video
+        <video
           autoPlay
           loop
           muted
@@ -26,10 +19,10 @@ const Hero = () => {
           className="hidden md:block w-full h-full object-cover brightness-[0.9] contrast-[1.05]"
         >
           <source src={desktopVideo} type="video/mp4" />
-        </video> */}
+        </video>
 
         {/* Mobile Video: Shown on small screens, hidden on medium and up */}
-        {/* <video
+        <video
           autoPlay
           loop
           muted
@@ -37,11 +30,9 @@ const Hero = () => {
           className="block md:hidden w-full h-full object-cover brightness-[0.9] contrast-[1.05]"
         >
           <source src={mobileVideo} type="video/mp4" />
-        </video> */}
-
-        <video key={isMobile ? 'mobile' : 'desktop'} autoPlay loop muted playsInline>
-          <source src={isMobile ? desktopVideo : desktopVideo} type="video/mp4" />
         </video>
+
+    
         
         {/* Subtle Vignette */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20 pointer-events-none" />
