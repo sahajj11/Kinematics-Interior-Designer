@@ -14,7 +14,7 @@ const Navbar = () => {
     }
   });
 
-  const navLinks = ['About', 'Services', 'Approach', 'Our Works'];
+  const navLinks = ['About', 'Services', 'Projects'];
 
   return (
     <>
@@ -93,14 +93,15 @@ const Navbar = () => {
                 {item}
               </motion.a>
             ))}
-            <motion.button 
+            <motion.a
+              href="#contact"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="mt-4 px-12 py-4 border border-black bg-black text-white text-[10px] font-black uppercase tracking-widest"
             >
               Contact Us
-            </motion.button>
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>
