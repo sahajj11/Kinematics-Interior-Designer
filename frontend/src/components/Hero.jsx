@@ -40,7 +40,7 @@ const Hero = () => {
         </video> */}
 
         <video key={isMobile ? 'mobile' : 'desktop'} autoPlay loop muted playsInline>
-          <source src={isMobile ? mobileVideo : desktopVideo} type="video/mp4" />
+          <source src={isMobile ? desktopVideo : desktopVideo} type="video/mp4" />
         </video>
         
         {/* Subtle Vignette */}
