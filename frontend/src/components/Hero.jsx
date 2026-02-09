@@ -31,7 +31,7 @@ const Hero = () => {
         >
           <source src={mobileVideo} type="video/mp4" />
         </video>
-
+      
     
         
         {/* Subtle Vignette */}
@@ -39,15 +39,7 @@ const Hero = () => {
       </div>
 
       {/* 2. Minimalist Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-4">
-        <div className="h-12 w-[1px] bg-white/20 relative overflow-hidden">
-          <motion.div 
-            animate={{ y: [0, 48] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className="h-1/3 w-full bg-white"
-          />
-        </div>
-      </div>
+      
     </section>
   );
 };
