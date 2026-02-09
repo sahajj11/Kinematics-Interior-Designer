@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import desktopVideo from "../assets/video_kin_d.mp4";
 import mobileVideo from "../assets/video_kin_g.mp4";
+import poster from "../assets/poster.png";
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
@@ -24,9 +25,11 @@ const Hero = () => {
         {/* Mobile Video: Shown on small screens, hidden on medium and up */}
         <video
           autoPlay
+          poster={poster}
           loop
           muted
           playsInline
+          preload="auto"
           className="block md:hidden w-full h-full object-cover brightness-[0.9] contrast-[1.05]"
         >
           <source src={mobileVideo} type="video/mp4" />
