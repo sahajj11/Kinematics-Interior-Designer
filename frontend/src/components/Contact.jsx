@@ -23,7 +23,7 @@ const Contact = () => {
                 Let's start your <br /> <span className="italic text-gray-300">journey.</span>
               </h2>
               <p className="text-gray-500 text-lg font-light leading-relaxed max-w-md mb-12">
-                Whether you are envisioning a private villa on the Palm or a bespoke corporate HQ, our team is ready to translate your vision into reality.
+                Whether  you are envisioning a private villa on the Palm or a bespoke corporate HQ, our team is ready to translate your vision into reality.
               </p>
             </div>
 
@@ -38,6 +38,7 @@ const Contact = () => {
                 <p className="text-black font-serif text-xl italic">studio@kinematics.ae</p>
               </div>
             </div>
+            
           </motion.div>
 
           {/* RIGHT COLUMN: The Concierge Form */}

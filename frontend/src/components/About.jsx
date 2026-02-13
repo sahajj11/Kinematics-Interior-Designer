@@ -69,7 +69,7 @@ const About = () => {
                   <ul className="space-y-4">
                     {['Architectural Planning', 'Interior Curation', 'Bespoke Joinery'].map((service, i) => (
                       <li key={i} className="flex items-center gap-4 text-[10px] uppercase tracking-widest text-black border-b border-gray-100 pb-4">
-                        <span className="text-gray-300">0{i+1}</span>
+                         <span className="text-gray-300">0{i+1}</span>
                         {service}
                       </li>
                     ))}
